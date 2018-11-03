@@ -28,4 +28,11 @@ public class LayoutAnimationActivity extends AppCompatActivity {
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
         list_view.setLayoutAnimation(controller);*/
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
+        overridePendingTransition(R.anim.zoom_enter,R.anim.zoom_exit);
+    }
 }
